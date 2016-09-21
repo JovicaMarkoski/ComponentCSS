@@ -1,0 +1,84 @@
+// <div class="button-container">
+// 	<div class="button">
+// 		<span>Ver Detalles</span>
+// 	</div>
+// </div>
+
+@mixin button($height,$width,$background_color,$color_text,$text_transform,$vertical_center,$horizontal_center,$background_color_hover,$border_radius:"",$margin:"",$padding:"",$min_height:"",$max_height:"",$min_width:"",$max_width:"",$icon_padding:"",$icon_font_size:""){
+	display: flex;
+	flex-direction: column; 
+	> div{
+		cursor: pointer;
+		background-color: $background_color;
+		display: flex;
+		align-items: $vertical_center;
+		justify-content: $horizontal_center;
+		height: $height;
+		width: $width;
+		@if($min_height != ""){
+			min-height: $min_height;	
+		}
+		@if($max_height != ""){
+			max-height: $max_height;	
+		}
+		@if($min_width != ""){
+			min-width: $min_width;	
+		}
+		@if($max_width != ""){
+			max-width: $max_width;	
+		}
+		@if($border_radius != ""){
+			border-radius: $border_radius;	
+		}
+		@if($margin != ""){
+			margin: $margin;	
+		}
+		span,div{
+			color: $color_text;
+			@if($text_transform == 1){
+				text-transform: uppercase;	
+			}
+			@if($padding != ""){
+				padding: $padding;	
+			}
+		}
+		&:hover{
+			background-color: $background_color_hover;
+		}
+
+		.custom-icon{
+			display: inline-block;
+			@if($icon_padding != ""){
+				padding: $icon_padding;
+			}
+			@if($icon_font_size != ""){
+				font-size: $icon_font_size;
+			}
+		}
+	}
+}
+
+// <div class="menu-hamburguer">
+// 		<div></div>
+// 		<div></div>
+// 		<div></div>
+// 	</div>
+
+@mixin menu_hamburguer($padding_container,$line_height,$line_width,$background_color,$line_margin){
+	padding: $padding_container;
+	cursor: pointer;
+    display: inline-block;
+	div{
+		height: $line_height;
+		width: $line_width;
+		background-color: $background_color;
+		margin: $line_margin;
+		&:first-child{
+			margin-top: 0;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+

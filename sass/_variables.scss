@@ -1,0 +1,15 @@
+$blue: #0000FF;
+$green: #00FF00;
+
+$screen-xxxs: "(max-width: 480px)";
+$screen-xxs: "(max-width: 640px)";
+$screen-xs: "(max-width: 767px)";
+$screen-sm: "(max-width: 991px)";
+$screen-md: "(max-width: 1199px)";
+
+$screen-xs-sm: "(min-width: 768px) and (max-width: 991)";
+$screen-sm-md: "(min-width: 992px) and (max-width: 1199)";
+
+
+// @media #{$screen-xs} { }
+

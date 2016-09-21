@@ -1,0 +1,47 @@
+@import "mixins";
+@import "variables";
+//@include button($height,$width,$background_color,$color_text,$text_transform,$vertical_center,$horizontal_center,$border_radius:,$margin,$min_height,$max_height,$min_width,$max_width);
+
+.button-container-parent{
+	display: flex;
+	justify-content: space-around;
+}
+
+.button-container{
+	@include button
+	(
+		50px,  			//height
+		100%, 			//width
+		$blue, 			//background_color
+		white, 			//color_text
+		1,     			//text_transform
+		center,			//vertical_center
+		center,			//horizontal_center
+		$green,			//hover
+		10px,   		//border_radius
+		20px auto, 		//margin
+		10px 15px,		//padding
+		null,			//min_height
+		null,			//max_height
+		200px,			//min_width
+		500px,			//max_width
+		
+		0 0 0 10px,		//icon_padding
+		16px			//icon_font_size
+	);
+}
+
+//@include menu_hamburguer($padding_container,$line_height,$line_width,$background_color,$line_margin);
+
+.menu-hamburguer{
+	@include menu_hamburguer
+	(
+		10px, 			//padding_container
+		5px, 			//line_height
+		60px,			//line_width
+		black,			//background_color
+		10px 0			//line_margin
+	);
+}
+
+
